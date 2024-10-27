@@ -50,7 +50,7 @@ username := "prabowo"
 const year int := 2024
 ```
 
-### Input
+### Input (yes pointers are back)
 ```go
 var year int
 fmt.Scan(&year)
@@ -159,6 +159,46 @@ for{
     }
     fmt.Printf("Succesfully bought %v tickets\n",toBuy)
 }
+```
+
+### Functions
+```go
+func functionName(var1 type1, var2 type2, ...) retTypeIfAny{
+    // codes to execute
+    return varToReturnIfAny
+}
+functionName(value1, value2)
+```
+
+```go
+func main(){
+    firstNames := GetFirstNames(bookings)
+}
+func GetFirstNames(bookings []string) []string{
+    firstNames := []string{}
+    for _, booking := range bookings{
+        var names = strings.Fields(booking)
+        firstNames.append(firstNames, names[0])
+    }
+    return firstNames
+}
+```
+
+U can return multiple variables from a function
+```go
+func main(){
+    isValidName, isValidEmail, isValidTicketNumber := ValidateUserInput(firstName, lastName, email, userTickets, remainingTickets)
+}
+func ValidateUserInput(firstName string, lastName, string, email string, userTickets uint, remainingTickets uint) (bool, bool, bool){
+    isValidName := len(firstName) >= 2 && len(lastName) >= 2
+    isValidEmail := strings.Contains(email,"@")
+    isValidTicketNumber := userTickets >0 && userTickets <= remainingTickets
+    return isValidName, isValidEmail, isValidTicketNumber
+}
+```
+
+```go
+
 ```
 
 ```go
