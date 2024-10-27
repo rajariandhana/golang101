@@ -12,7 +12,13 @@ func main(){
     fmt.Println("Hello world")
 }
 ```
-Go programs are organized into packages, Go's standar library provides different core packages for us to use such as "fmt". Run code by <code>go run {fileName}.go</code>
+Go programs are organized into packages, Go's standar library provides different core packages for us to use such as "fmt". Run code by <code>go run {fileName}.go</code>. If you have more than one packages: 
+```go
+import (
+    "fmt"
+    "strings"
+)
+```
 
 ### Variables
 If u declare but not use variable, red squiggly line will appear.
@@ -85,4 +91,42 @@ fmt.Printf("Full slice: %v\n",gyrffindor)
 fmt.Printf("First: %v\n",gyrffindor[0])
 fmt.Printf("Slice type: %T\n",gyrffindor)
 fmt.Printf("Slice length: %v\n",len(gyrffindor))
+```
+
+### Loop
+```go
+for {
+    // this is an infinite loop
+}
+```
+```go
+for index, valueVar := range arrayVar{
+    fmt.Print("arrayVar[%v]: %v\n",index, valueVar)
+}
+```
+```go
+var gryffindors = []string{"Harry Potter","Ron Weasley","Hermione Granger"}
+firstNames := []string{}
+for _, gryffindor := range gryffindors{
+    var words = strings.Fields(gryffindor)
+    var firstName = words[0]
+    firstNames = append(firstNames, firstName)
+}
+```
+_ is a blank idetifier if you don't use index in the loop
+
+```go
+
+```
+
+```go
+
+```
+
+```go
+
+```
+
+```go
+
 ```
