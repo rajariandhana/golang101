@@ -93,6 +93,20 @@ fmt.Printf("Slice type: %T\n",gyrffindor)
 fmt.Printf("Slice length: %v\n",len(gyrffindor))
 ```
 
+### If Statements
+```go
+if condition {
+
+}
+else if condition {
+
+}
+else {
+
+}
+```
+Can be used with <code>&&</code> <code>||</code> <code>!=</code> <code>==</code>
+
 ### Loop
 ```go
 for {
@@ -101,7 +115,7 @@ for {
 ```
 ```go
 for index, valueVar := range arrayVar{
-    fmt.Print("arrayVar[%v]: %v\n",index, valueVar)
+    fmt.Printf("arrayVar[%v]: %v\n",index, valueVar)
 }
 ```
 ```go
@@ -116,11 +130,21 @@ for _, gryffindor := range gryffindors{
 _ is a blank idetifier if you don't use index in the loop
 
 ```go
-
-```
-
-```go
-
+var remTickets = 50
+for{
+    var toBuy
+    fmt.Printf("How many tickets: ")
+    fmt.Scan(&toBuy)
+    if toBuy > remTickets {
+        fmt.Printf("Only have %v tickets, can't book that much, try again\n",remTickets)
+        continue
+    }
+    else if remTickets <= toBuy {
+        fmt.Printf("Sorry we r sold out: ")
+        break
+    }
+    fmt.Printf("Succesfully bought %v tickets\n",toBuy)
+}
 ```
 
 ```go
