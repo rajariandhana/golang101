@@ -107,6 +107,20 @@ else {
 ```
 Can be used with <code>&&</code> <code>||</code> <code>!=</code> <code>==</code>
 
+### I hate switch case
+```go
+island := "Java"{
+    case "Sumatra":
+        // code to exec if island is Sumatra
+    case "Java":
+        // code to exec if island is Java
+    case "Kalimantan", "Sulawesi", "Papua":
+        // code to exec if island is Kalimantan or Sulawesi or Papua
+    default:
+        fmt.Println("invalid island selected")
+}
+```
+
 ### Loop
 ```go
 for {
