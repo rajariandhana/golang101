@@ -50,6 +50,17 @@ username := "prabowo"
 const year int := 2024
 ```
 
+### Package Level Variables (it's just global variables)
+Declared outside main can be used globally, cannot be declared with <code>:=</code>
+```go
+var username = "fufufafa"
+const phi float = 3.14
+var islands = []string{}
+func main(){
+    fmt.Println("%v %v %v",username,phi,islands)
+}
+```
+
 ### Input (yes pointers are back)
 ```go
 var year int
