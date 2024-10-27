@@ -12,7 +12,7 @@ func main(){
     fmt.Println("Hello world")
 }
 ```
-Go programs are organized into packages, Go's standar library provides different core packages for us to use such as "fmt". Run code by <code>go run {fileName}.go</code>. If you have more than one packages: 
+Go programs are organized into packages, Go's standar library provides different core packages for us to use such as "fmt". Run code by <code>go run {fileName}.go</code>. If you have more than one packages (yes must multiple line): 
 ```go
 import (
     "fmt"
@@ -120,7 +120,8 @@ Can be used with <code>&&</code> <code>||</code> <code>!=</code> <code>==</code>
 
 ### I hate switch case
 ```go
-island := "Java"{
+island := "Java"
+switch island{
     case "Sumatra":
         // code to exec if island is Sumatra
     case "Java":
