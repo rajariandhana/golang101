@@ -209,14 +209,43 @@ func ValidateUserInput(firstName string, lastName, string, email string, userTic
 }
 ```
 
+### Packages
+Go programs are organized into packages, a package is basically a collection of Go files. When creating a file, define which package it belongs to.
+```go
+package packageName
+```
+<code>go run file1.go file2.go fileX.go</code> or more easily <code>go run .</code>
+Suppose this is your project structure
+```
+/projectDir
+    /helper
+        - helper.go
+    - go.mod
+    - main.go
+```
+
+In main.go you can import the package by using the module name in go.mod and the path to the package file.
+```go
+package main
+import (
+    "golang101/helper"
+)
+
+helper.CanBeUsed()
+```
+
+In helper.go you can define and choose which functions to be exported. Export just means that the function is publicly available in the file that imports it. To export it simply make sure that the name of the function starts with an uppercase.
+```go
+func CanBeUsed(){
+
+}
+func cannotBeUsed(){
+
+}
+```
+
+Same thing with variable, just give it uppercase at first letter to make it publicly available.
 ```go
 
 ```
 
-```go
-
-```
-
-```go
-
-```
